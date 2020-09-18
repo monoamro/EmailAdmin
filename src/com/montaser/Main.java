@@ -10,7 +10,9 @@ public class Main {
         String department = Console.getDepartment();
 
         var email = new Email(firstName, lastName, department);
-        System.out.println(email.getEmail());
+        String password = PasswordConstructor.createPassword(18);
+
+        System.out.println(password);
 
     }
 

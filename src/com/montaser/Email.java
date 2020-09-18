@@ -6,7 +6,6 @@ public class Email {
     private String department;
     private String email;
     private String password;
-
     private String alternativeEmail;
     private int capacity = 500;
 
@@ -15,12 +14,15 @@ public class Email {
         this.lastName = lastName;
         this.department = department;
         this.email = createEmail();
+        this.password = PasswordConstructor.createPassword();
     }
 
     private String createEmail() {
         String suffix = "@" + department + "oracel.com";
         return firstName + "." + lastName + suffix;
     }
+
+    // Getters and Setters
 
     public String getEmail() {
         return email;
@@ -33,4 +35,13 @@ public class Email {
     public void setAlternativeEmail(String alternativeEmail) {
         this.alternativeEmail = alternativeEmail;
     }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setCapacity(int capacity) {
+        this.capacity = capacity;
+    }
+
 }
