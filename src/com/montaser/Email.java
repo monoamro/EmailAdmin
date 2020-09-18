@@ -1,30 +1,26 @@
 package com.montaser;
 
 public class Email {
-    private String firstName;
-    private String lastName;
-    private String department;
+    private User user;
     private String email;
     private String password;
     private String alternativeEmail;
     private int capacity = 500;
 
-    public Email(String firstName, String lastName, String department) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.department = department;
+    public Email(User user) {
+        this.user = user;
         this.email = createEmail();
-        this.password = PasswordConstructor.createPassword();
+        this.password = PasswordConstructor.createPassword(18);
     }
 
     private String createEmail() {
-        String suffix = "@" + department + "oracel.com";
-        return firstName + "." + lastName + suffix;
+        String suffix = "@" + user.getDepartment() + "oracel.com";
+        return user.getFirstName() + "." + user.getLastName() + suffix;
     }
 
     // Getters and Setters
 
-    public String getEmail() {
+    public String getEmailAddress() {
         return email;
     }
 

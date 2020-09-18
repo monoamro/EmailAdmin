@@ -8,8 +8,6 @@ public class PasswordConstructor {
         password = new char[12];
         for(int i=0; i<12; i++) {
             int rand = (int) (Math.random() * 76);
-            System.out.println(rand);
-            System.out.println(chars.charAt(rand));
             password[i] = chars.charAt(rand);
         }
         return new String(password);

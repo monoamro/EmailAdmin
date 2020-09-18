@@ -9,10 +9,13 @@ public class Main {
         String lastName = Console.getInfo("Last Name: ");
         String department = Console.getDepartment();
 
-        var email = new Email(firstName, lastName, department);
-        String password = PasswordConstructor.createPassword(18);
+        var user = new User(firstName, lastName, department);
 
-        System.out.println(password);
+        System.out.println(user.getName());
+        System.out.println(user.getEmail().getEmailAddress());
+        System.out.println(user.getEmail().getPassword());
+
+
 
     }
 
