@@ -12,11 +12,8 @@ public class Main {
         var user = new User(firstName, lastName, department);
 
         System.out.println(user.getName());
-        System.out.println(user.getEmail().getEmailAddress());
+        System.out.println(user.getEmail());
         System.out.println(user.getEmail().getPassword());
-
-
-
     }
 
 }

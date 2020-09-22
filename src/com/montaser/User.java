@@ -5,7 +5,6 @@ public class User {
     private String firstName;
     private String lastName;
     private String department;
-
     private Email email;
 
     public User(String firstName, String lastName, String department) {

@@ -20,10 +20,6 @@ public class Email {
 
     // Getters and Setters
 
-    public String getEmailAddress() {
-        return email;
-    }
-
     public String getAlternativeEmail() {
         return alternativeEmail;
     }
@@ -40,4 +36,8 @@ public class Email {
         this.capacity = capacity;
     }
 
+    @Override
+    public String toString() {
+        return email;
+    }
 }
